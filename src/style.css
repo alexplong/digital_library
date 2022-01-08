@@ -1,0 +1,340 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  font-family: "Public Sans", sans-serif;
+  background-color: #264653;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a, a:visited, a:hover {
+  text-decoration: none;
+  color: #F9FAF8;
+}
+
+
+.flex {
+  display: flex;
+}
+.flex-dir-r {
+  flex-direction: row;
+}
+.flex-dir-c {
+  flex-direction: column;
+}
+.flex-jc-sb {
+  justify-content: space-between;
+}
+.flex-jc-c {
+  justify-content: center;
+}
+.flex-jc-fs {
+  justify-content: flex-start;
+}
+.flex-jc-fe {
+  justify-content: flex-end;
+}
+.flex-ai-c {
+  align-items: center;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+.block {
+  display: block;
+}
+.block-inline {
+  display: inline-block;
+}
+
+
+
+
+header {
+  width: 100%;
+  margin: 20px;
+
+}
+
+.headerContainer {
+  width: 600px;
+}
+
+header,div.left {
+  font-size: 32px;
+  font-weight: 700;
+  color: #e9c46a;
+  letter-spacing: 4px;
+}
+
+header.right {
+
+
+
+}
+
+header button {
+  border: 3px solid #e9c46a;
+  background-color: #e9c46a;
+  padding: 18px 8px;
+  font-size: 16px;
+  font-weight: 700;
+
+  border-radius: 12px;;
+  text-shadow: 0 0.04rem 0.04rem rgba(0,0,0,0.35);
+  line-height: 5px;
+  text-align: center;
+  align-items: middle;
+
+transition: all 0.2s;
+}
+
+header button:hover {
+border-color: #e76f51;
+
+}
+
+
+
+
+
+footer {
+  width: 100%;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgb(190, 200, 209);
+
+}
+
+
+.containerWrap {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  margin: 50px 0;
+  gap: 10px;
+}
+
+.card {
+  display: block;
+  position: relative;
+
+  background-color: #f4a261;
+  width: 200px;
+  height: 250px;
+  border: solid 5px black;
+  border-radius: 15px;
+  padding: 20px;
+  
+}
+
+.card>.title {
+  display: block;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  top: -30px;
+}
+
+.card>.authorDiv {
+  display: block;
+  font-size: 14px;
+  text-align: right;
+  
+}
+
+.card>.authorDiv>p, .card>.authorDiv>span {
+  display: inline-block;
+  font-weight: 700;
+
+}
+
+.card>.authorDiv>p {
+  padding-right: 5px;
+}
+
+.card>.pageDiv {
+  display: block;
+  font-size: 14px;
+  text-align: right;
+}
+
+.card>.pageDiv>p, .card>.pageDiv>span {
+  display: inline-block;
+  position: absolute;
+  right: 25px;
+  font-weight: 700;
+}
+
+.card>.pageDiv>span {
+  padding-right: 5px;
+}
+.card>.readLabel {
+  position: absolute;
+  font-size: 12px;
+  left: 0;
+  bottom: 45px;
+
+}
+
+.card>.readDiv {
+  display: block;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+
+.card>.readDiv>input, .card>.readDiv>label {
+  display: inline-block;
+}
+
+.card>button {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 7px;
+  bottom: 7px;
+
+  content: "X";
+  background-color: red;
+  color: #black;
+  padding: 0.5rem 0.3rem;
+  margin: 0 0.1rem 0.1rem 0;
+  border: 0.16rem solid rgba(255, 255, 255, 0);
+  border-radius: 10rem;
+  text-decoration: none;
+  font-family: 'Roboto',sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;;
+  text-shadow: 0 0.04rem 0.04rem rgba(0,0,0,0.35);
+  line-height: 5px;
+  text-align: center;
+  align-items: middle;
+
+  transition: all 0.2s;
+}
+
+.card>button:hover {
+  border-color: rgb(123, 132, 218);
+
+}
+
+
+
+.popup {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+
+}
+
+.theForm {
+  position: relative;
+  text-align: left;
+  border: 1px solid black;
+  background-color: white;
+  width: 400px;
+  height: 300px;
+  padding: 15px;
+
+  top: 50%;
+  border-radius: 10px;
+}
+
+.addForm>label, .addForm>input {
+margin: 5px;
+font-size: 14px;
+width: 100%;
+}
+
+.submitButton {
+  position: absolute;
+  width: 50px;
+}
+
+.exitPop {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.addForm {
+  position: absolute;
+  width: 300px;
+  top: 40px;
+}
+
+form.addForm>.submitButton {
+  position: absolute;
+  right: -45px;
+  bottom: -25px;
+}
+
+.hide {
+  display: none;
+}
+
+
+.read {
+  background-color: #f4a261;
+}
+
+.read-icon>img {
+  height: 40px;
+  width: auto;
+  position: relative;
+  bottom: 0px;
+  left: -2px;
+
+}
+
+
+
+/* ADDING SWITCH BUTTON */
+
+.switch-wrap {
+  cursor: pointer;
+  background: #2a9d8f;
+  padding: 7px;
+  width: 50px;
+  height: 35px;
+  border-radius: 33.5px;
+  border: 3px solid #e9c46a;
+}
+.switch-wrap input {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 0fr 1fr 1fr;
+  transition: 0.2s;
+}
+.switch:after {
+  content: "";
+  border-radius: 50%;
+  background: #264653;
+  grid-column: 2;
+  transition: background 0.2s;
+}
+
+input:checked + .switch {
+  grid-template-columns: 1fr 1fr 0fr;
+}
+input:checked + .switch:after {
+  background-color: #264653;
+}
