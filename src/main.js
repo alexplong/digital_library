@@ -16,7 +16,6 @@ import renderPage from "./app/sandbox/render";
   const showForm = document.querySelector(".popup");
   const exitPopup = document.querySelector(".exitPop");
   const container = document.querySelector(".container");
-  const deleteButtons = document.querySelectorAll(".delete-book");
 
   // UI eventlisteners
   exitPopup.addEventListener("click", () => {
@@ -65,12 +64,12 @@ import renderPage from "./app/sandbox/render";
   });
 
   container.addEventListener("click", (event) => {
-    console.log(event);
+    if (event.target.classList.contains("delete")) {
+      let DeleteThisBook = event.target.parentNode.dataset.title;
+      let x = myLibrary.findIndex((book) => book.title === DeleteThisBook);
+      myLibrary.splice(x, 1);
+      localStorage.setItem("booksArray", JSON.stringify(myLibrary));
+      renderPage().deleteBook(DeleteThisBook);
+    }
   });
-  // deleteButtons.addEventListener("click", (event) => {
-  //   console.log(event);
-  // });
-
-  //     localStorage.setItem("booksArray", JSON.stringify(myLibrary)); // update localStorage
-  //     localStorage.setItem("booksArray", JSON.stringify(myLibrary)); // update localStorage
 })();
