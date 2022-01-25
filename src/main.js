@@ -1,3 +1,4 @@
+import "./style.scss";
 import Book from "./app/sandbox/newbook";
 import renderPage from "./app/sandbox/render";
 
