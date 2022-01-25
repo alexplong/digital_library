@@ -30,7 +30,12 @@ const renderPage = () => {
       title.setAttribute("class", "title");
       authorName.setAttribute("class", "author");
       pagesNumber.setAttribute("class", "page");
-      delBtn.setAttribute("class", "delete-book");
+
+      readSwitch.setAttribute("class", "read-button");
+      readSwitch.setAttribute("type", "checkbox");
+
+      delBtn.setAttribute("class", "delete");
+      card.setAttribute("data-title", `${element.title}`);
 
       authorContainer.append(authorName);
       pagesContainer.append(pagesNumber);
@@ -57,6 +62,7 @@ const renderPage = () => {
     let pagesNumber = document.createElement("span");
     let readContainer = document.createElement("div");
     let readSwitch = document.createElement("input");
+    let delBtn = document.createElement("button");
 
     authorContainer.setAttribute(
       "class",
@@ -68,22 +74,38 @@ const renderPage = () => {
     title.textContent = `${book.title}`;
     authorName.textContent = `By ${book.author}`;
     pagesNumber.textContent = `${book.pages} pages`;
+    delBtn.textContent = "X";
 
     title.setAttribute("class", "title");
     authorName.setAttribute("class", "author");
     pagesNumber.setAttribute("class", "page");
+    readSwitch.setAttribute("class", "read-button");
+    readSwitch.setAttribute("type", "checkbox");
+    delBtn.setAttribute("class", "delete");
+    card.setAttribute("data-title", `${book.title}`);
 
     authorContainer.append(authorName);
     pagesContainer.append(pagesNumber);
     readContainer.append(readSwitch);
 
-    card.append(title, authorContainer, pagesContainer, readContainer);
+    card.append(title, authorContainer, pagesContainer, readContainer, delBtn);
     container.append(card);
+  };
+
+  const deleteBook = (book) => {
+    let byeBook = document.querySelector(`[data-title='${book}']`);
+    container.removeChild(byeBook);
+  };
+
+  const readBook = (book) => {
+    let x = document.querySelector();
   };
 
   return {
     showLibrary,
     showBook,
+    deleteBook,
+    readBook,
   };
 
   // move to main

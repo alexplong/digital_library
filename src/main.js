@@ -71,5 +71,9 @@ import renderPage from "./app/sandbox/render";
       localStorage.setItem("booksArray", JSON.stringify(myLibrary));
       renderPage().deleteBook(DeleteThisBook);
     }
+
+    if (event.target.classList.contains("read-button")) {
+      renderPage().readBook(event.target.parentNode.parentNode.dataset.title);
+    }
   });
 })();
