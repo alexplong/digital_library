@@ -73,8 +73,12 @@ import renderPage from "./app/sandbox/render";
       renderPage().deleteBook(DeleteThisBook);
     }
 
-    if (event.target.classList.contains("read-button")) {
-      renderPage().readBook(event.target.parentNode.parentNode.dataset.title);
+    if (event.target.classList.contains("Switch_Input")) {
+      let bookRead = event.target.parentNode.parentNode.dataset.title;
+      let x = myLibrary.findIndex((book) => book.title === bookRead);
+      myLibrary[x].read = event.target.checked;
+      localStorage.setItem("booksArray", JSON.stringify(myLibrary));
+      console.log(myLibrary);
     }
   });
 })();

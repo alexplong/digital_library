@@ -1,0 +1,64 @@
+.popup {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+.theForm {
+  position: relative;
+  text-align: left;
+  border: 1px solid black;
+  background-color: white;
+  width: 400px;
+  height: 300px;
+  padding: 15px;
+
+  top: 50%;
+  border-radius: 10px;
+}
+
+.addForm > label,
+.addForm > input {
+  margin: 5px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.submitButton {
+  position: absolute;
+  width: 50px;
+}
+
+.exitPop {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.addForm {
+  position: absolute;
+  width: 300px;
+  top: 40px;
+}
+
+form.addForm > .submitButton {
+  position: absolute;
+  right: -45px;
+  bottom: -25px;
+}
+
+.hide {
+  display: none;
+}
+
+.read {
+  background-color: #f4a261;
+}
+
+.read-icon > img {
+  height: 40px;
+  width: auto;
+  position: relative;
+  bottom: 0px;
+  left: -2px;
+}

@@ -11,11 +11,16 @@ const renderPage = () => {
       let authorName = document.createElement("span");
       let pagesContainer = document.createElement("div");
       let pagesNumber = document.createElement("span");
-      let readContainer = document.createElement("div");
-      let readSwitch = document.createElement("input");
       let delBtn = document.createElement("button");
 
-      authorContainer.setAttribute("class", "flex flex-dir-r flex-ai-c");
+      let Switch = document.createElement("label");
+      let toggleInput = document.createElement("input");
+      let toggleSwitch = document.createElement("span");
+
+      authorContainer.setAttribute(
+        "class",
+        "flex flex-dir-r flex-ai-c flex-jc-c"
+      );
       pagesContainer.setAttribute(
         "class",
         "flex flex-dir-r flex-ai-c flex-jc-c"
@@ -31,23 +36,21 @@ const renderPage = () => {
       authorName.setAttribute("class", "author");
       pagesNumber.setAttribute("class", "page");
 
-      readSwitch.setAttribute("class", "read-button");
-      readSwitch.setAttribute("type", "checkbox");
-
       delBtn.setAttribute("class", "delete");
       card.setAttribute("data-title", `${element.title}`);
 
+      Switch.setAttribute("class", "Switch");
+      toggleInput.setAttribute("type", "checkbox");
+      toggleInput.setAttribute("class", "Switch_Input");
+      toggleSwitch.setAttribute("class", "Slider");
+
+      Switch.append(toggleInput, toggleSwitch);
+      toggleInput.checked = element.read;
+
       authorContainer.append(authorName);
       pagesContainer.append(pagesNumber);
-      readContainer.append(readSwitch);
 
-      card.append(
-        title,
-        authorContainer,
-        pagesContainer,
-        readContainer,
-        delBtn
-      );
+      card.append(title, authorContainer, pagesContainer, Switch, delBtn);
       container.append(card);
     });
   };
@@ -60,9 +63,11 @@ const renderPage = () => {
     let authorName = document.createElement("span");
     let pagesContainer = document.createElement("div");
     let pagesNumber = document.createElement("span");
-    let readContainer = document.createElement("div");
-    let readSwitch = document.createElement("input");
     let delBtn = document.createElement("button");
+
+    let Switch = document.createElement("label");
+    let toggleInput = document.createElement("input");
+    let toggleSwitch = document.createElement("span");
 
     authorContainer.setAttribute(
       "class",
@@ -79,16 +84,21 @@ const renderPage = () => {
     title.setAttribute("class", "title");
     authorName.setAttribute("class", "author");
     pagesNumber.setAttribute("class", "page");
-    readSwitch.setAttribute("class", "read-button");
-    readSwitch.setAttribute("type", "checkbox");
+
     delBtn.setAttribute("class", "delete");
     card.setAttribute("data-title", `${book.title}`);
+    Switch.setAttribute("class", "Switch");
+    toggleInput.setAttribute("type", "checkbox");
+    toggleInput.setAttribute("class", "Switch_Input");
+    toggleSwitch.setAttribute("class", "Slider");
+
+    Switch.append(toggleInput, toggleSwitch);
+    toggleInput.checked = book.read;
 
     authorContainer.append(authorName);
     pagesContainer.append(pagesNumber);
-    readContainer.append(readSwitch);
 
-    card.append(title, authorContainer, pagesContainer, readContainer, delBtn);
+    card.append(title, authorContainer, pagesContainer, Switch, delBtn);
     container.append(card);
   };
 
@@ -97,19 +107,11 @@ const renderPage = () => {
     container.removeChild(byeBook);
   };
 
-  const readBook = (book) => {
-    let x = document.querySelector();
-  };
-
   return {
     showLibrary,
     showBook,
     deleteBook,
-    readBook,
   };
-
-  // move to main
-  // localStorage.setItem("booksArray", JSON.stringify(myLibrary));
 };
 
 export default renderPage;

@@ -1,0 +1,51 @@
+.card {
+  display: block;
+  position: relative;
+
+  background-color: #f4a261;
+  width: 200px;
+  height: 250px;
+  border: solid 5px black;
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.card > .title {
+  display: block;
+  height: 30px;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-align: center;
+  position: relative;
+  top: -30px;
+}
+
+.card > button {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 7px;
+  bottom: 7px;
+  content: "X";
+  background-color: red;
+  color: #black;
+  padding: 0.5rem 0.3rem;
+  margin: 0 0.1rem 0.1rem 0;
+  border: 0.16rem solid rgba(255, 255, 255, 0);
+  border-radius: 10rem;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-shadow: 0 0.04rem 0.04rem rgba(0, 0, 0, 0.35);
+  line-height: 5px;
+  text-align: center;
+  align-items: middle;
+}
+
+.card > button:hover {
+  border-color: rgb(123, 132, 218);
+}
+

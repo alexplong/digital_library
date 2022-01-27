@@ -1,0 +1,43 @@
+header {
+  width: 100%;
+  margin: 20px;
+}
+
+.headerContainer {
+  width: 600px;
+}
+
+header,
+div.left {
+  font-size: 32px;
+  font-weight: 700;
+  color: #e9c46a;
+  letter-spacing: 4px;
+}
+
+header button {
+  border: 3px solid #e9c46a;
+  background-color: #e9c46a;
+  padding: 18px 8px;
+  font-size: 16px;
+  font-weight: 700;
+
+  border-radius: 12px;
+  text-shadow: 0 0.04rem 0.04rem rgba(0, 0, 0, 0.35);
+  line-height: 5px;
+  text-align: center;
+  align-items: middle;
+
+  transition: all 0.2s;
+}
+
+header button:hover {
+  border-color: #e76f51;
+}
+
+footer {
+  width: 100%;
+  font-size: 13px;
+  font-weight: 700;
+  color: rgb(190, 200, 209);
+}
