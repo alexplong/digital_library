@@ -1,8 +1,10 @@
 .Switch {
-  position: relative;
+  position: absolute;
+  bottom: 14px;
+  left: 15px;
   display: block;
-  width: 30px;
-  height: 17px;
+  width: 50px;
+  height: 25px;
 }
 
 .Switch_Input {
@@ -18,7 +20,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   background-color: lightgray;
   transition: 0.3s;
 }
@@ -26,9 +28,9 @@
 .Slider::before {
   position: absolute;
   content: "";
-  height: 13px;
-  width: 13px;
-  left: 2px;
+  height: 21px;
+  width: 21px;
+  left: 4px;
   bottom: 2px;
   border-radius: 50%;
   background-color: white;
@@ -36,9 +38,9 @@
 }
 
 .Switch_Input:checked + .Slider::before {
-  transform: translateX(13px);
+  transform: translateX(21px);
 }
 
 .Switch_Input:checked + .Slider {
-  background-color: cornflowerblue;
+  background-color: #bada55;
 }
